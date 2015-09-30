@@ -1,0 +1,43 @@
+header {
+  .logo {
+    margin: 20px;
+    max-width: 250px;
+  }
+  .language {
+    float: right;
+    font-size: 16px;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin-right: 10px;
+      &:last-child { margin-right: 50px; }
+    }
+  }
+  #navigation-menu {
+    border-top: 2px solid $color-line;
+    font-size: 22px;
+    line-height: 24px;
+    overflow: hidden;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+    li {
+      @include span-columns(2);
+      &:last-child { margin-right: 0; }
+      text-align: center;
+      margin-bottom: 0;
+      &:hover {
+        border-bottom: 5px solid $green;
+      }
+      &.active, &.active:hover {
+        background-color: $green;
+        font-weight: bolder;
+        a { color: white; }
+      }
+    }
+    a {
+      display: block;
+      padding: 18px 18px;
+    }
+  }
+}

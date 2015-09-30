@@ -1,0 +1,38 @@
+body {
+  color: $black;
+  font-family: "Lato";
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 auto;
+  max-width: 1366px;
+  a {
+    color: $black;
+    text-decoration: none;
+    &:hover { color: $green; }
+  }
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  h1 {
+    color: white;
+    font-size: 64px;
+    line-height: 70px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 200px;
+  }
+  h2 {
+    color: $green;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+.main {
+  background-image: url('background-main.jpg');
+  height: 400px;
+  position: relative;
+}
+
+#side_body { display: none; }
