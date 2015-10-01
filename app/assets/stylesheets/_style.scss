@@ -27,6 +27,7 @@ body {
     color: $green;
     font-size: 48px;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 .main {
@@ -36,3 +37,30 @@ body {
 }
 
 #side_body { display: none; }
+
+.product {
+  overflow: hidden;
+  article {
+    @include span-columns (4);
+    text-align: center;
+    position: relative;
+    img {
+      -webkit-filter: blur(4px);
+      display: block;
+      margin: 0 auto;
+      max-height: 240px;
+      max-width: 350px;
+      object-fit: cover;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 33px;
+      line-height: 35px;
+      color: white;
+      font-weight: bolder;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

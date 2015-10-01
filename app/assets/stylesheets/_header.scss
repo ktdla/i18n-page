@@ -9,26 +9,28 @@ header {
     li {
       display: inline-block;
       list-style-type: none;
-      margin-right: 10px;
-      &:last-child { margin-right: 50px; }
+      padding: 10px;
+      border-right: 1px solid $color-line;
+      box-sizing: content-box;
+      &:last-child {
+        border: none;
+        margin-right: 50px;
+      }
     }
   }
   #navigation-menu {
     border-top: 2px solid $color-line;
     font-size: 22px;
     line-height: 24px;
-    overflow: hidden;
     margin: 0;
+    overflow: hidden;
     padding-left: 0;
     text-align: center;
     li {
+      margin-bottom: 0;
+      text-align: center;
       @include span-columns(2);
       &:last-child { margin-right: 0; }
-      text-align: center;
-      margin-bottom: 0;
-      &:hover {
-        border-bottom: 5px solid $green;
-      }
       &.active, &.active:hover {
         background-color: $green;
         font-weight: bolder;
