@@ -16,7 +16,7 @@ body {
   }
   h1 {
     color: white;
-    font-size: 64px;
+    font-size: 3em;
     line-height: 70px;
     position: absolute;
     right: 20px;
@@ -25,7 +25,7 @@ body {
   }
   h2 {
     color: $green;
-    font-size: 48px;
+    font-size: 2.4em;
     line-height: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -55,20 +55,20 @@ body {
       object-fit: cover;
     }
     span {
+      color: white;
+      font-size: 1.7em;
+      font-weight: bolder;
+      left: 50%;
+      line-height: 35px;
       position: absolute;
       top: 50%;
-      left: 50%;
-      font-size: 33px;
-      line-height: 35px;
-      color: white;
-      font-weight: bolder;
       transform: translate(-50%, -50%);
       z-index: 2;
     }
   }
   .overlay {
     -webkit-filter: blur(3px);
-    background-color: $black;
+    background-color: $green;
     border-radius: 5px;
     height: 250px;
     max-height: 240px;
@@ -80,7 +80,49 @@ body {
     &:hover { opacity: 0.5; }
   }
 }
+.content { margin: 50px; }
 
-.content {
-  margin: 50px;
+.certificate {
+  overflow: hidden;
+  article {
+    text-align: center;
+    @include span-columns(3);
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 170px;
+      margin-bottom: 25px;
+    }
+    button {
+      background-color: $green;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: .8em;
+      outline: 0;
+      padding: 5px;
+      width: 170px;
+    }
+  }
+}
+
+.blog {
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .blog-2 {
+    margin-bottom: 29px;
+    @include span-columns(8)
+  }
+  .blog-1, .blog-3, .blog-4 {
+    @include span-columns(4);
+    display: block;
+  }
+  .blog-1 img { height: 430px; }
+  .blog-3, .blog-2, .blog-4 {
+    img { height: 200px; }
+  }
+  .blog-2, .blog-4 { margin-right: 0; }
 }
