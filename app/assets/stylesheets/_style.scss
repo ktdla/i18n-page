@@ -16,7 +16,7 @@ body {
   }
   h1 {
     color: white;
-    font-size: 64px;
+    font-size: 3em;
     line-height: 70px;
     position: absolute;
     right: 20px;
@@ -25,7 +25,9 @@ body {
   }
   h2 {
     color: $green;
-    font-size: 48px;
+    font-size: 2.4em;
+    line-height: 50px;
+    margin-bottom: 50px;
     text-align: center;
   }
 }
@@ -36,3 +38,160 @@ body {
 }
 
 #side_body { display: none; }
+
+.product {
+  overflow: hidden;
+  article {
+    @include span-columns (4);
+    text-align: center;
+    position: relative;
+    img {
+      -webkit-filter: blur(3px);
+      border-radius: 5px;
+      display: block;
+      margin: 0 auto;
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+    }
+    span {
+      color: white;
+      font-size: 1.7em;
+      font-weight: bolder;
+      left: 50%;
+      line-height: 35px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+  }
+  .overlay {
+    -webkit-filter: blur(3px);
+    background-color: $green;
+    border-radius: 5px;
+    height: 240px;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    &:hover { opacity: 0.5; }
+  }
+}
+.content { margin: 50px; }
+
+.certificate {
+  overflow: hidden;
+  article {
+    text-align: center;
+    @include span-columns(3);
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 170px;
+      margin-bottom: 25px;
+    }
+    button {
+      background-color: $green;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: .8em;
+      outline: 0;
+      padding: 5px;
+      width: 170px;
+    }
+  }
+}
+
+.blog {
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .blog-1, .blog-3, .blog-4 {
+    @include span-columns(4);
+    display: block;
+  }
+  .blog-3, .blog-2, .blog-4 {
+    img { height: 200px; }
+  }
+  .blog-2, .blog-4 { margin-right: 0; }
+}
+.blog .overlay {
+  background-color: $green;
+  border-radius: 5px;
+  opacity: 0.2;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.info {
+  background-color: black;
+  border-radius: 0 0 5px 5px;
+  bottom: 0;
+  color: white;
+  opacity: 0.7;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+  span { opacity: 1; }
+  .description, i { display: none; }
+  &:hover {
+    border-radius: 5px;
+    padding: 50px 20px;
+    top: 0;
+    .title { margin-bottom: 20px; }
+    .title, .description, i { display: block; }
+    .description {
+      font-size: .8em;
+      font-weight: normal;
+      opacity: 0.5;
+      padding: 20px;
+      text-align: left;
+    }
+    i {
+      bottom: 50px;
+      font-size: 2em;
+      position: absolute;
+      right: 30px;
+    }
+  }
+}
+.blog-1 {
+  position: relative;
+  img { height: 430px; }
+  .overlay { height: 430px; }
+}
+.blog-2 {
+  margin-bottom: 29px;
+  position: relative;
+  .overlay { height: 200px; }
+  @include span-columns(8)
+}
+.blog-3, .blog-4, .blog-2 {
+  overflow: hidden;
+  position: relative;
+  .overlay { height: 200px; }
+  .info i { bottom: 10px; }
+  .info .title { margin-bottom: 5px; }
+  .info:hover {
+    .description {
+      padding: 5px;
+      font-size: .7em;
+    }
+    padding: 20px;
+    i { font-size: 1.5em; }
+  }
+}
+
+.company {
+  overflow: hidden;
+  img {
+    @include span-columns(4);
+  }
+}

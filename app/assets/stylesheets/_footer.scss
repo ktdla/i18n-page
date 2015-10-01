@@ -1,0 +1,33 @@
+footer {
+  div {
+    overflow: hidden;
+    padding: 20px;
+    background-color: $green;
+    i { color: white; }
+    span {
+      display: block;
+      color: white;
+    }
+    article {
+      position: relative;
+      padding: 0 20px;
+      i { font-size: 2em; }
+      div {
+        left: 65px;
+        top: 0;
+        margin: 0 auto;
+        position: absolute;
+      }
+      @include span-columns (4);
+    }
+  }
+  ul {
+    margin-right: 50px;
+    float: right;
+    li {
+      padding-left: 20px;
+      display: inline-block;
+      font-size: .8em;
+    }
+  }
+}

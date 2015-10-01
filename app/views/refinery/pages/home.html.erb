@@ -1,43 +1,111 @@
 <section class="main">
-  <div class="container">
-    <h1>Frase fuerza en Miranda somos...</h1>
-  </div>
+  <h1>Frase fuerza en Miranda somos...</h1>
 </section>
-<section>
+<section class="product content">
   <h2>Ofrecemos productos de calidad</h2>
-  <article>Cebolla amarilla</article>
-  <article>Cebolla roja</article>
-  <article>Ajos</article>
+  <article>
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'productos/amarilla-background.jpg' %>
+      <span>Cebolla amarilla</span>
+    </a>
+  </article>
+  <article>
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'productos/roja-background.jpg' %>
+      <span>Cebolla roja</span>
+    </a>
+  </article>
+  <article>
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'productos/ajos-background.jpg' %>
+      <span>Ajos</span>
+    </a>
+  </article>
 </section>
-<section>
+<section class="content certificate">
   <h2>Certificaciones</h2>
   <article>
-    <img src=""/>
-    <button>Global G.A.P.</button>
+    <%= image_tag 'certificado/certificado.jpg' %>
+    <button>
+      Global G.A.P.
+      <i class="fa fa-download"></i>
+    </button>
   </article>
   <article>
-    <img src=""/>
-    <button>Global G.A.P.</button>
+    <%= image_tag 'certificado/certificado.jpg' %>
+    <button>
+      Global G.A.P.
+      <i class="fa fa-download"></i>
+    </button>
   </article>
   <article>
-    <img src=""/>
-    <button>Global G.A.P.</button>
+    <%= image_tag 'certificado/certificado.jpg' %>
+    <button>
+      Global G.A.P.
+      <i class="fa fa-download"></i>
+    </button>
   </article>
   <article>
-    <img src=""/>
-    <button>Global G.A.P.</button>
+    <%= image_tag 'certificado/certificado.jpg' %>
+    <button>
+      Global G.A.P.
+      <i class="fa fa-download"></i>
+    </button>
   </article>
 </section>
-<section>
+<section class="content blog">
   <h2>Novedades</h2>
-  <article>Blog 1</article>
-  <article>Blog 2</article>
-  <article>Blog 3</article>
-  <article>Blog 4</article>
+  <article class="blog-1">
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'blog/blog1.jpg' %>
+      <div class="info">
+        <span class="title">Título que describa el primer blog</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <i class="fa fa-long-arrow-right"></i>
+      </div>
+    </a>
+  </article>
+  <article class="blog-2">
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'blog/blog1.jpg' %>
+      <div class="info">
+        <span class="title">Título que describa el segundo blog</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <i class="fa fa-long-arrow-right"></i>
+      </div>
+    </a>
+  </article>
+  <article class="blog-3">
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'blog/blog1.jpg' %>
+      <div class="info">
+        <span class="title">Título que describa el tercer blog</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <i class="fa fa-long-arrow-right"></i>
+      </div>
+    </a>
+  </article>
+  <article class="blog-4">
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'blog/blog1.jpg' %>
+      <div class="info">
+        <span class="title">Título que describa el cuarto blog</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <i class="fa fa-long-arrow-right"></i>
+      </div>
+    </a>
+  </article>
 </section>
-<section>
+<section class="content company">
   <h2>Empresas que forman parte de Miranda</h2>
-  <img src=""/>
-  <img src=""/>
-  <img src=""/>
+  <%= image_tag 'empresas/agricola-logo.jpg' %>
+  <%= image_tag 'empresas/agricola-logo.jpg' %>
+  <%= image_tag 'empresas/agricola-logo.jpg' %>
 </section>
