@@ -1,22 +1,31 @@
 <div>
   <article>
-    <span>Contáctanos</span>
-    <span>contacto@grupomiranda.com</span>
+    <i class="fa fa-envelope"></i>
+    <div>
+      <span>Contáctanos</span>
+      <span>contacto@grupomiranda.com</span>
+    </div>
   </article>
   <article>
-    <span>Ubícanos en</span>
-    <span>Carretera Panamericana Sur Km 278 Salas Guadalupe - Ica</span>
+    <i class="fa fa-map-marker"></i>
+    <div>
+      <span>Ubícanos en</span>
+      <span>Carretera Panamericana Sur Km 278 Salas Guadalupe - Ica</span>
+    </div>
   </article>
   <article>
-    <span>Síguenos en</span>
-    <span>/grupomiranda</span>
+    <i class="fa fa-facebook-square"></i>
+    <div>
+      <span>Síguenos en</span>
+      <span>/grupomiranda</span>
+    </div>
   </article>
 </div>
 <ul>
-  <li>Inicio</li>
-  <li>Nosotros</li>
-  <li>Productos</li>
-  <li>Calidad</li>
-  <li>Contacto</li>
-  <li>Blog</li>
+  <%= link_to_in_li "Inicio", '/' %>
+  <%= link_to_in_li "Nosotros", '/nosotros' %>
+  <%= link_to_in_li "Productos", '/productos' %>
+  <%= link_to_in_li "Calidad", '/calidad' %>
+  <%= link_to_in_li "Contacto", '/contacto' %>
+  <%= link_to_in_li "Blog", '/blog' %>
 </ul>

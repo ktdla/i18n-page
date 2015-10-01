@@ -188,3 +188,10 @@ body {
     i { font-size: 1.5em; }
   }
 }
+
+.company {
+  overflow: hidden;
+  img {
+    @include span-columns(4);
+  }
+}
