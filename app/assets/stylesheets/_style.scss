@@ -26,8 +26,9 @@ body {
   h2 {
     color: $green;
     font-size: 48px;
-    text-align: center;
+    line-height: 50px;
     margin-bottom: 50px;
+    text-align: center;
   }
 }
 .main {
@@ -45,11 +46,12 @@ body {
     text-align: center;
     position: relative;
     img {
-      -webkit-filter: blur(4px);
+      -webkit-filter: blur(3px);
+      border-radius: 5px;
       display: block;
       margin: 0 auto;
-      max-height: 240px;
-      max-width: 350px;
+      height: 240px;
+      width: 100%;
       object-fit: cover;
     }
     span {
@@ -61,6 +63,24 @@ body {
       color: white;
       font-weight: bolder;
       transform: translate(-50%, -50%);
+      z-index: 2;
     }
   }
+  .overlay {
+    -webkit-filter: blur(3px);
+    background-color: $black;
+    border-radius: 5px;
+    height: 250px;
+    max-height: 240px;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    width: 100%;
+    z-index: 1;
+    &:hover { opacity: 0.5; }
+  }
+}
+
+.content {
+  margin: 50px;
 }
