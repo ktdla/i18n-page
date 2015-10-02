@@ -1,5 +1,5 @@
 footer {
-  div {
+  > div {
     overflow: hidden;
     padding: 20px;
     background-color: $green;
@@ -9,8 +9,10 @@ footer {
       color: white;
     }
     article {
+      height: 60px;
       position: relative;
-      padding: 0 20px;
+      font-size: .8em;
+      letter-spacing: .5px;
       i { font-size: 2em; }
       div {
         left: 65px;
@@ -22,7 +24,7 @@ footer {
     }
   }
   ul {
-    margin-right: 50px;
+    margin: 10px 50px;
     float: right;
     li {
       padding-left: 20px;
@@ -30,4 +32,5 @@ footer {
       font-size: .8em;
     }
   }
+  div .container { padding: 0; }
 }

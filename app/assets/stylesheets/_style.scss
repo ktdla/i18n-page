@@ -28,6 +28,7 @@ body {
     font-size: 2.4em;
     line-height: 50px;
     margin-bottom: 50px;
+    margin-top: 0;
     text-align: center;
   }
 }
@@ -78,7 +79,12 @@ body {
     &:hover { opacity: 0.5; }
   }
 }
-.content { margin: 50px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+}
 
 .certificate {
   overflow: hidden;
@@ -210,7 +216,7 @@ h3 {
 }
 
 .mision-vision {
-  background-color: $green;
+  background-color: #B8E986;
   overflow: hidden;
   padding: 2em 10%;
   margin-bottom: 2em;
@@ -230,7 +236,7 @@ h3 {
 }
 
 .values {
-  padding: 2em 10%;
+  padding: 2em;
   overflow: hidden;
   div {
     width: 50%;
@@ -250,9 +256,14 @@ h3 {
         margin-top: 7em;
       }
     }
+    span { color: $description; }
   }
 }
 
 .map img {
   width: 100%;
+}
+
+.container.values, .container.map, .container.blog, .container.certificate, .container.product {
+  border-bottom: 2px solid $color-line;
 }
