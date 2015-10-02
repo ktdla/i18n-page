@@ -195,3 +195,64 @@ body {
     @include span-columns(4);
   }
 }
+
+// Nosotros
+h3 {
+  font-size: 1.6em;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+.story > p {
+  margin: 0 auto 2em;
+  max-width: 1024px;
+  padding: 0 2em;
+}
+
+.mision-vision {
+  background-color: $green;
+  overflow: hidden;
+  padding: 2em 10%;
+  margin-bottom: 2em;
+  text-align: center;
+  p { text-align: left; }
+  article {
+    float: left;
+    padding: 0 2em;
+    width: 50%;
+  }
+}
+
+.wider-image {
+  object-fit: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.values {
+  padding: 2em 10%;
+  overflow: hidden;
+  div {
+    width: 50%;
+    float: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    &:nth-child(2) {
+      border-right: 3px solid $green;
+      padding-top: 2em;
+      text-align: right;
+      article {
+        padding-bottom: 7em;
+      }
+    }
+    &:nth-child(3) {
+      article {
+        margin-top: 7em;
+      }
+    }
+  }
+}
+
+.map img {
+  width: 100%;
+}
