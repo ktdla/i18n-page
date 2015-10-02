@@ -29,6 +29,13 @@ body {
     text-align: center;
   }
 }
+//general
+.line { border-bottom: 2px solid $color-line; }
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px;
+}
 
 //home
 .main {
@@ -85,12 +92,6 @@ body {
     z-index: 1;
     &:hover { opacity: 0.5; }
   }
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px;
 }
 
 .certificate {
@@ -294,10 +295,4 @@ h3 {
   }
 }
 
-.map img {
-  width: 100%;
-}
-
-.container.values, .container.map, .container.blog, .container.certificate, .container.product {
-  border-bottom: 2px solid $color-line;
-}
+.map img { width: 100%; }
