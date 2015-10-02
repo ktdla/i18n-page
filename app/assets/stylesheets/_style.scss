@@ -119,16 +119,38 @@ body {
 
 .blog {
   overflow: hidden;
+  .category {
+    background-color: #6D9E37;
+    border-radius: 5px;
+    color: white;
+    left: 10px;
+    padding: .2em;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 100px;
+  }
+  select {
+    float: right;
+    background-color: #6D9E37;
+    padding: .5em;
+    font-size: 1em;
+    color: #FFFFFF;
+    margin-bottom: 29px;
+    border-radius: 5px;
+    border: 0;
+    font-family: "Lato";
+  }
   img {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
   }
-  .blog-1, .blog-3, .blog-4 {
+  .blog-1, .blog-3, .blog-4, .blog-5 {
     @include span-columns(4);
     display: block;
   }
-  .blog-3, .blog-2, .blog-4 {
+  .blog-3, .blog-2, .blog-4, .blog-5 {
     img { height: 200px; }
   }
   .blog-2, .blog-4 { margin-right: 0; }
@@ -186,7 +208,12 @@ body {
   .overlay { height: 200px; }
   @include span-columns(8)
 }
-.blog-3, .blog-4, .blog-2 {
+.blog-5 {
+  margin-bottom: 29px;
+  clear:right;
+  &:nth-child(3n +1) { margin-right: 0; }
+}
+.blog-3, .blog-4, .blog-2, .blog-5 {
   overflow: hidden;
   position: relative;
   .overlay { height: 200px; }
