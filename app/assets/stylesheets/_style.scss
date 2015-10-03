@@ -213,7 +213,7 @@ body {
 }
 
 h3 {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 900;
   margin-top: 0;
   margin-bottom: .5em;
@@ -351,5 +351,83 @@ h3 {
     margin-top: 50px;
     padding: 10px;
     width: 200px;
+  }
+}
+
+//descripcion-producto
+.main-product {
+  background-image: url('productos/producto-background.jpg');
+  background-size: 100%;
+  height: 400px;
+  position: relative;
+  object-fit: cover;
+  .overlay {
+    background-color: $black;
+    border-radius: 5px;
+    height: 400px;
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  h1 {
+    position: absolute;
+    left: 50px;
+    text-align: center;
+    bottom: 50px;
+    margin: 0;
+    z-index: 2;
+  }
+}
+.benefits {
+  overflow: hidden;
+  img {
+    float: left;
+    width: 60%;
+  }
+  div {
+    padding: 50px 0;
+    width: 40%;
+    float: right;
+    span {
+      padding: 50px 60px;
+      display: block;
+      &:last-child { padding-top: 90px; }
+    }
+  }
+}
+.product-description {
+  overflow: hidden;
+  .description {
+    display: inline-block;
+    padding-right: 100px;
+    width: 50%;
+  }
+  .product-calendar {
+    background-color: #FEFEF9;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px $color-line;
+    float: right;
+    padding: 10px 20px;
+    width: 45%;
+    span {
+      display: block;
+      font-size: .8em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    div {
+      float: left;
+      font-size: .7em;
+      margin-bottom: 5px;
+      width: 25%;
+      i { margin-right: 5px; }
+    }
+    div.unavailable { color: #D8D8D8; }
+  }
+  .product-details {
+    @include span-columns(4);
+    margin-top: 50px;
+    padding: 0 30px;
   }
 }
