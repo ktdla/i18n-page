@@ -1,0 +1,20 @@
+@media screen and (max-width: 900px) {
+  header {
+    .language { margin-bottom: 0; }
+    .navigation-menu-button {
+      display: block;
+      float: right;
+      font-size: 2em;
+      clear: right;
+      margin-right: 50px;
+      &:hover {
+        color: $green;
+      }
+    }
+    #navigation-menu {
+    }
+    nav {
+      display: none;
+    }
+  }
+}

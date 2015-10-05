@@ -18,6 +18,10 @@ header {
       }
     }
   }
+  .navigation-menu-button {
+    cursor: pointer;
+    display: none;
+  }
   #navigation-menu {
     border-bottom: 2px solid $color-line;
     border-top: 2px solid $color-line;
