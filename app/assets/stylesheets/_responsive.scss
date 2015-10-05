@@ -1,6 +1,10 @@
 @media screen and (max-width: 900px) {
   header {
-    .language { margin-bottom: 0; }
+    .logo { max-width: 200px; }
+    .language {
+      display: block;
+      margin-bottom: 0;
+    }
     .navigation-menu-button {
       display: block;
       float: right;
@@ -43,5 +47,24 @@
         font-size: .9em;
       }
     }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer {
+    div article {
+      position: static;
+      float: inherit;
+      height: 60px;
+      width: 100%;
+      margin: 0 auto;
+      &:last-child { height: 40px; }
+      i { float: left; }
+      div {
+        text-align: left;
+        margin-left: 50px;
+      }
+    }
+    ul { display: none; }
   }
 }
