@@ -1,14 +1,18 @@
 @media screen and (max-width: 900px) {
   header {
-    .logo { max-width: 200px; }
+    overflow: hidden;
+    .logo {
+      max-width: 200px;
+    }
     .language {
       display: block;
+      margin-top: 10px;
       margin-bottom: 0;
     }
     .navigation-menu-button {
       display: block;
       float: right;
-      font-size: 2em;
+      font-size: 1.5em;
       clear: right;
       margin-right: 50px;
       &:hover {
@@ -16,20 +20,21 @@
       }
     }
     #navigation-menu {
-      border-top: 1px solid #EEE;
       display: none;
-      margin-bottom: 20px;
-      padding-top: 10px;
+      width: 100%;
+      margin-right: 50px;
       li {
         background-color: white;
         border-radius: 0;
         display: block;
-        position: static;
+        width: 100%;
         text-align: right;
-        a { padding-right: 0; }
+        font-size: .8em;
+        a { padding-right: 50px; }
+        &:last-child { width: 100%; }
         &.active {
           margin: 0;
-          transform: scale(1);
+          background-color: $green;
         }
       }
     }
@@ -50,7 +55,20 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 675px) {
+  header {
+    .logo {
+      width: 100%;
+      display: block;
+      margin: 15px auto;
+    }
+    .language {
+      float: left;
+    }
+    .navigation-menu-button {
+      margin-top: 10px;
+    }
+  }
   footer {
     div article {
       position: static;
