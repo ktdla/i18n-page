@@ -1,0 +1,25 @@
+<% if post.live? %>
+  <article class="blog-5 id="<%= dom_id(post) %>"">
+    <a href="#">
+      <div class="overlay"></div>
+      <%= image_tag 'blog/blog1.jpg' %>
+      <% if (categories = post.categories.translated).any? %>
+        <span class='category fill-in'>
+          <%= t('Hola', :scope => 'refinery.blog.posts.show') %>
+          <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+        </span>
+      <% end %>
+      <div class="info">
+        <span class="title"><%= link_to post.title, refinery.blog_post_path(post) %></span>
+        <span class="description">
+          <% if blog_post_teaser_enabled? %>
+            <%= blog_post_teaser(post) %>
+          <% else %>
+            <%= post.body.html_safe %>
+          <% end %>
+        </span>
+        <i class="fa fa-long-arrow-right"><%= link_to post.title, refinery.blog_post_path(post) %></i>
+      </div>
+    </a>
+  </article>
+<% end %>
