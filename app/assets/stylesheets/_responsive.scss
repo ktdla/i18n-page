@@ -74,13 +74,21 @@
       position: static;
       float: inherit;
       height: 60px;
-      width: 100%;
+      width: 80%;
       margin: 0 auto;
-      &:last-child { height: 40px; }
-      i { float: left; }
+      &:last-child {
+        height: 40px;
+        margin: 0 auto;
+      }
+      i {
+        float: left;
+        text-align: right;
+        width: 20%;
+      }
       div {
-        text-align: left;
-        margin-left: 50px;
+        width: 80%;
+        float: left;
+        text-align: center;
       }
     }
     ul { display: none; }
