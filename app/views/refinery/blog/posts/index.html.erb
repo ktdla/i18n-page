@@ -1,0 +1,19 @@
+<% content_for :body do %>
+  <% if @posts.any? %>
+    <section class="container blog" id="blog_posts">
+      <select>
+        <option>Selecciona una categoría</option>
+        <option value="noticias">Noticias</option>
+        <option value="recetas">Recetas</option>
+      </select>
+      <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+      <%= will_paginate @posts %>
+    </section>
+  <% else %>
+    <p><%= t('.no_blog_articles_yet') %></p>
+  <% end %>
+<% end %>
+<%= render '/refinery/blog/shared/body_content_right' %>
+
+<%= render "/refinery/content_page" %>
+<% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
