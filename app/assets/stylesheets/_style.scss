@@ -1,8 +1,8 @@
 body {
   color: $black;
-  font-family: "Roboto";
-  font-size: 20px;
-  line-height: 22px;
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 25px;
   margin: 0 auto;
   max-width: 1366px;
   a {
@@ -20,11 +20,12 @@ body {
     line-height: 60px;
   }
   h2 {
-    color: $color-title;
-    font-size: 2em;
+    color: $black;
+    font-size: 1.3em;
+    text-transform: uppercase;
     font-weight: bold;
     line-height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     margin-top: 0;
     text-align: center;
   }
@@ -41,12 +42,12 @@ body {
 .container.main, .container.main-product { margin-top: 25px; }
 .main {
   background-image: url('background-main.jpg');
-  height: 400px;
+  height: 600px;
   position: relative;
   h1 {
     position: absolute;
     right: 50px;
-    width: 700px;
+    width: 600px;
     text-align: center;
     bottom: 50px;
     margin: 0;
@@ -62,7 +63,6 @@ body {
     text-align: center;
     position: relative;
     img {
-      -webkit-filter: blur(3px);
       border-radius: 5px;
       display: block;
       margin: 0 auto;
@@ -71,19 +71,14 @@ body {
       object-fit: cover;
     }
     span {
-      color: white;
-      font-size: 1.7em;
+      color: $black;
+      font-size: .9em;
       font-weight: bolder;
       left: 50%;
       line-height: 35px;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
     }
   }
   .overlay {
-    -webkit-filter: blur(3px);
     background-color: $green;
     border-radius: 5px;
     height: 240px;
@@ -222,9 +217,10 @@ body {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1em;
   font-weight: 900;
   margin-top: 0;
+  text-transform: uppercase;
   margin-bottom: .5em;
 }
 .story > p {
@@ -255,7 +251,7 @@ h3 {
 
 .wider-image {
   object-fit: cover;
-  height: 400px;
+  height: 600px;
   width: 100%;
 }
 
@@ -322,50 +318,61 @@ h3 {
 
 //contacto
 .contact {
+  font-size: .9em;
   border-radius: 5px;
-  border: 3px solid $green;
+  border: 1px solid $color-line;
   line-height: 2em;
   margin: 0 auto;
   overflow: hidden;
-  padding: 50px;
-  width: 70%;
-  box-shadow: 5px 5px 5px $color-line;
-  input {
+  padding: 25px 50px;
+  width: 60%;
+  box-shadow: 2px 2px 2px $color-line;
+  span { display: block; }
+  input[type=text] {
     border-radius: 5px;
-    border-style: 1px solid $color-line;
+    border: 1px outset;
+    border-color: $color-line;
     color: $black;
-    font-family: "Roboto";
-    font-size: 1em;
-    margin: 5px;
+    font-family: "PT Sans";
+    font-size: .9em;
+    margin-top: 2px;
+    margin-bottom: 10px;
     outline: 0;
-    padding: 5px 10px;
-    width: 250px;
+    padding: 2px 5px;
+    width: 100%;
   }
   textarea {
     border-radius: 5px;
-    border-style: 1 solid $color-line;
+    border-color: $color-line;
+    border: 1px outline;
     color: $black;
     display: block;
-    font-family: "Roboto";
-    font-size: 1em;
-    height: 150px;
+    font-family: "PT Sans";
+    font-size: .9em;
+    height: 100px;
     margin-top: 10px;
+    margin-bottom: 10px;
     outline: 0;
     padding: 5px 10px;
     width: 100%;
   }
   button {
-    background-color: $green;
+    background-color: white;
     border-radius: 5px;
-    border: 0;
-    color: white;
+    border: 1px solid $color-line;
+    color: $black;
     cursor: pointer;
     float: right;
-    font-family: "Roboto";
-    font-size: 1em;
-    margin-top: 50px;
+    font-family: "PT Sans";
+    box-shadow: 2px 2px 2px $color-line;
+    font-size: .9em;
+    margin-top: 25px;
     padding: 10px;
     width: 200px;
+    &:hover {
+      color: white;
+      background-color: $green;
+    }
   }
 }
 
