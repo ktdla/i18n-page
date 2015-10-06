@@ -1,0 +1,131 @@
+@media screen and (max-width: 900px) {
+  header {
+    overflow: hidden;
+    .logo {
+      max-width: 200px;
+    }
+    .language {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .navigation-menu-button {
+      display: block;
+      float: right;
+      font-size: 1.5em;
+      clear: right;
+      margin-right: 50px;
+      &:hover {
+        color: $green;
+      }
+    }
+    #navigation-menu {
+      display: none;
+      width: 100%;
+      margin-right: 50px;
+      li {
+        background-color: white;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        text-align: right;
+        font-size: .8em;
+        a { padding-right: 50px; }
+        &:last-child { width: 100%; }
+        &.active {
+          margin: 0;
+          background-color: $green;
+        }
+      }
+    }
+  }
+  .main h1 {
+    font-size: 1.8em;
+    width: 100%;
+    right: 0;
+  }
+  section h2 { font-size: 1.5em; }
+  .product {
+    article {
+      width: 100%;
+      margin-bottom: 50px;
+    span { font-size: 1.2em; }
+    }
+  }
+  .certificate{
+    article {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .blog {
+    .blog-1, .blog-2, .blog-3, .blog-4 {
+      width: 100%;
+      margin-bottom: 30px;
+      img, .overlay { height: 200px; }
+    }
+  }
+  footer {
+    div article {
+      height: 100px;
+      .fa {
+        display: flex;
+        justify-content: center;
+      }
+      div {
+        position: static;
+        text-align: center;
+        font-size: .9em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  header {
+    .logo {
+      width: 100%;
+      display: block;
+      margin: 15px auto;
+    }
+    .language {
+      float: left;
+    }
+    .navigation-menu-button {
+      margin-top: 10px;
+    }
+  }
+  .certificate article {
+      width: 100%;
+      margin-right: 0;
+  }
+  .company img {
+    width: 50%;
+    margin-right: 0;
+  }
+  footer {
+    div article {
+      position: static;
+      float: inherit;
+      height: 60px;
+      width: 80%;
+      margin: 0 auto;
+      &:last-child {
+        height: 40px;
+        margin: 0 auto;
+      }
+      i {
+        float: left;
+        text-align: right;
+        width: 20%;
+      }
+      div {
+        width: 80%;
+        float: left;
+        text-align: center;
+      }
+    }
+    ul { display: none; }
+  }
+}
