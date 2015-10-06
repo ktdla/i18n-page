@@ -4,11 +4,12 @@ header {
   padding-top: 25px;
   max-width: 1200px;
   overflow: hidden;
+  padding-bottom: 25px;
   margin: 0 auto;
   .logo {
     margin-top: 25px;
     width: 400px;
-    display: inline-block;
+    float: left;
   }
   .language {
     float: right;
@@ -30,8 +31,8 @@ header {
     display: none;
   }
   nav {
+    margin-top: 33px;
     float: right;
-    margin-bottom: 25px;
   }
   #navigation-menu {
     font-size: .9em;
@@ -41,18 +42,21 @@ header {
     text-align: center;
     li {
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 20px;
       margin-bottom: 0;
       text-align: center;
       &.active, &.active:hover {
         background-color: $green;
-        font-weight: bolder;
-        a { color: white; }
+        a {
+          color: white;
+          border-bottom: 0;
+        }
       }
     }
     a {
       display: inline-block;
-      padding: 15px 15px;
+      padding: 10px;
+      &:hover { border-bottom: 5px solid $green; }
     }
   }
 }
