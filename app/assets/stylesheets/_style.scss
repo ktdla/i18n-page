@@ -20,7 +20,7 @@ body {
     line-height: 60px;
   }
   h2 {
-    color: $green;
+    color: $color-title;
     font-size: 2em;
     font-weight: bold;
     line-height: 50px;
@@ -38,6 +38,7 @@ body {
 }
 
 //home
+.container.main { margin-top: 25px; }
 .main {
   background-image: url('background-main.jpg');
   height: 400px;
