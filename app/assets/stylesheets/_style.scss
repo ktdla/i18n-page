@@ -122,7 +122,10 @@ body {
 
 .blog {
   overflow: hidden;
-  a { overflow: hidden; }
+  a {
+    color: white;
+    overflow: hidden;
+  }
   img {
     width: 100%;
     object-fit: cover;
