@@ -39,6 +39,33 @@
       }
     }
   }
+  .main h1 {
+    font-size: 1.8em;
+    width: 100%;
+    right: 0;
+  }
+  section h2 { font-size: 1.5em; }
+  .product {
+    article {
+      width: 100%;
+      margin-bottom: 50px;
+    span { font-size: 1.2em; }
+    }
+  }
+  .certificate{
+    article {
+      width: 50%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .blog {
+    .blog-1, .blog-2, .blog-3, .blog-4 {
+      width: 100%;
+      margin-bottom: 30px;
+      img, .overlay { height: 200px; }
+    }
+  }
   footer {
     div article {
       height: 100px;
@@ -68,6 +95,14 @@
     .navigation-menu-button {
       margin-top: 10px;
     }
+  }
+  .certificate article {
+      width: 100%;
+      margin-right: 0;
+  }
+  .company img {
+    width: 50%;
+    margin-right: 0;
   }
   footer {
     div article {
