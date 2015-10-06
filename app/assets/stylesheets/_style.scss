@@ -99,11 +99,15 @@ body {
   overflow: hidden;
   article {
     text-align: center;
+    margin-bottom: 50px;
+    &:nth-child(2n+1) { margin-right: 0; }
     @include span-columns(3);
     img {
       display: block;
       margin: 0 auto;
       max-width: 170px;
+      height: 240px;
+      object-fit: cover;
       margin-bottom: 25px;
     }
     button {
