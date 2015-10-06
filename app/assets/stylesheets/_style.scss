@@ -1,6 +1,6 @@
 body {
   color: $black;
-  font-family: "Lato";
+  font-family: "Roboto";
   font-size: 20px;
   line-height: 22px;
   margin: 0 auto;
@@ -30,7 +30,7 @@ body {
   }
 }
 //general
-.line { border-bottom: 2px solid $color-line; }
+.line { border-bottom: 1px solid $color-line; }
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -38,7 +38,7 @@ body {
 }
 
 //home
-.container.main { margin-top: 25px; }
+.container.main, .container.main-product { margin-top: 25px; }
 .main {
   background-image: url('background-main.jpg');
   height: 400px;
@@ -99,11 +99,15 @@ body {
   overflow: hidden;
   article {
     text-align: center;
+    margin-bottom: 50px;
+    &:nth-child(2n+1) { margin-right: 0; }
     @include span-columns(3);
     img {
       display: block;
       margin: 0 auto;
       max-width: 170px;
+      height: 240px;
+      object-fit: cover;
       margin-bottom: 25px;
     }
     button {
@@ -111,7 +115,7 @@ body {
       border-radius: 5px;
       color: white;
       cursor: pointer;
-      font-family: Lato;
+      font-family: "Roboto";
       font-size: .8em;
       outline: 0;
       padding: 5px;
@@ -122,6 +126,10 @@ body {
 
 .blog {
   overflow: hidden;
+  a {
+    color: white;
+    overflow: hidden;
+  }
   img {
     width: 100%;
     object-fit: cover;
@@ -224,24 +232,30 @@ h3 {
   max-width: 1024px;
   padding: 0 2em;
 }
+.story div {
+  h2 { text-align: left; }
+  padding: inherit 10%;
+}
 
 .mision-vision {
-  background-color: #B8E986;
   overflow: hidden;
   padding: 2em 10%;
   margin-bottom: 2em;
-  text-align: center;
-  p { text-align: left; }
+  p { font-size: .8em; }
   article {
     float: left;
-    padding: 0 2em;
+    padding: 0 3em;
     width: 50%;
+    border-right: 1px solid $green;
+    &:last-child {
+      border-right: none;
+    }
   }
 }
 
 .wider-image {
   object-fit: cover;
-  height: 500px;
+  height: 400px;
   width: 100%;
 }
 
@@ -266,7 +280,7 @@ h3 {
         margin-top: 7em;
       }
     }
-    span { color: $description; }
+    span { font-size: .8em; }
   }
 }
 
@@ -293,7 +307,7 @@ h3 {
     border: 0;
     color: #FFFFFF;
     float: right;
-    font-family: "Lato";
+    font-family: "Roboto";
     font-size: .8em;
     height: 30px;
     margin-bottom: 29px;
@@ -320,7 +334,7 @@ h3 {
     border-radius: 5px;
     border-style: 1px solid $color-line;
     color: $black;
-    font-family: Lato;
+    font-family: "Roboto";
     font-size: 1em;
     margin: 5px;
     outline: 0;
@@ -332,7 +346,7 @@ h3 {
     border-style: 1 solid $color-line;
     color: $black;
     display: block;
-    font-family: Lato;
+    font-family: "Roboto";
     font-size: 1em;
     height: 150px;
     margin-top: 10px;
@@ -347,7 +361,7 @@ h3 {
     color: white;
     cursor: pointer;
     float: right;
-    font-family: Lato;
+    font-family: "Roboto";
     font-size: 1em;
     margin-top: 50px;
     padding: 10px;
@@ -369,6 +383,8 @@ h3 {
     opacity: 0.3;
     position: absolute;
     width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1;
   }
   h1 {
@@ -430,6 +446,8 @@ h3 {
     @include span-columns(4);
     margin-top: 50px;
     padding: 0 30px;
+    font-size: .8em;
+    ul { padding-left: 0; }
   }
 }
 
