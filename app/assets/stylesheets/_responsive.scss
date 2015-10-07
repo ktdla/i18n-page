@@ -65,6 +65,25 @@
       width: 100%;
     }
   }
+  .mision-vision article {
+    float: inherit;
+    width: 100%;
+    border: none;
+    margin-bottom: 25px;
+  }
+  .values div{
+    float: inherit;
+    width: 100%;
+    &:nth-child(2) {
+      border: none;
+      padding-top: 0;
+      text-align: left;
+      article { padding-bottom: 25px; }
+    }
+    &:nth-child(3) {
+      article { margin: 0 0 25px; }
+    }
+  }
   footer {
     div article {
       height: 100px;
@@ -123,4 +142,5 @@
     }
     ul { display: none; }
   }
+  .container { padding: 25px; }
 }
