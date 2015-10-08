@@ -24,7 +24,6 @@
     }
     #navigation-menu {
       display: none;
-      margin-right: 50px;
       width: 100%;
       li {
         background-color: white;
@@ -33,10 +32,9 @@
         font-size: .8em;
         text-align: right;
         width: 100%;
-        a { padding-right: 50px; }
         &:last-child { width: 100%; }
         &.active {
-          background-color: $green;
+          background-color: #FFFFFF;
           margin: 0;
         }
       }
@@ -104,8 +102,8 @@
   header {
     .logo {
       display: block;
-      margin: 15px auto;
-      width: 100%;
+      margin: 15px 5%;
+      width: 90%;
     }
     .language { float: left; }
     .navigation-menu-button { margin-top: 10px; }
@@ -116,7 +114,7 @@
   }
   .company img {
     margin-right: 0;
-    width: 50%;
+    width: 100%;
   }
   footer {
     div article {
