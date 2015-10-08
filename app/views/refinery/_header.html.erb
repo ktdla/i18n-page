@@ -1,10 +1,13 @@
 <%= link_to refinery.root_path do %>
   <%= image_tag "miranda-logo.png", :class => "logo" %>
 <% end %>
-<ul class="language">
-  <li><a href="#">Español</a></li>
-  <li><a href="#">English</a></li>
-  <li><a href="#">Português</a></li>
+<ul class="language" id='locale'>
+  <li><%= I18n.locale == "es" ? "es" : link_to("Español", { :locale => "es" })
+      %></li>
+  <li><%= I18n.locale == "en" ? "en" : link_to("English", { :locale => "en" })
+    %></li>
+  <li><%= I18n.locale == "pt" ? "pt" : link_to("Português", { :locale => "pt" })
+    %></li>
 </ul>
 <i class="navigation-menu-button fa fa-bars" id="mobile-menu"></i>
 <nav>
