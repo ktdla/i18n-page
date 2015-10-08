@@ -2,12 +2,11 @@
   <%= image_tag "miranda-logo.png", :class => "logo" %>
 <% end %>
 <ul class="language" id='locale'>
-  <li><%= I18n.locale == "es" ? "es" : link_to("Español", { :locale => "es" })
-      %></li>
-  <li><%= I18n.locale == "en" ? "en" : link_to("English", { :locale => "en" })
-    %></li>
-  <li><%= I18n.locale == "pt" ? "pt" : link_to("Português", { :locale => "pt" })
-    %></li>
+  <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+      <li>
+        <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+      </li>
+  <% end %>
 </ul>
 <i class="navigation-menu-button fa fa-bars" id="mobile-menu"></i>
 <nav>
