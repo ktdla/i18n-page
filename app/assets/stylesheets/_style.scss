@@ -286,7 +286,7 @@ h3 {
 }
 
 //contacto
-.contact {
+.contact, .new_comment {
   font-size: .9em;
   border-radius: 5px;
   border: 1px solid $color-line;
@@ -297,7 +297,7 @@ h3 {
   width: 60%;
   box-shadow: 2px 2px 2px $color-line;
   span { display: block; }
-  input[type=text] {
+  input {
     background: url(images/.png) center center no-repeat;
     border-radius: 4px;
     border: 1px solid $color-line;
@@ -344,6 +344,50 @@ h3 {
   }
 }
 
+#blog_post {
+  overflow: hidden;
+  padding: 50px 200px;
+  li {
+    list-style-type: disc;
+  }
+  p { text-align: center; }
+  time, .author { color: #AFAAAA; }
+  .author { margin-top: 25px; }
+}
+.preview {
+  margin: 0 auto;
+  padding: 25px;
+}
+#comments {
+  h2 { margin: 25px 0 10px; }
+  @extend .container;
+  padding-top: 0;
+  img {
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+  }
+  .blog_comment_message {
+    border-radius: 5px;
+    border: 1px solid $color-line;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 25px;
+    position: relative;
+    width: 60%;
+    p {
+      display: inline-block;
+      line-height: 50px;
+      margin: 0 0 0 10px;
+      vertical-align: top;
+    }
+    &:last-child { padding-bottom: 25px; }
+  }
+  .blog_comment_author {
+    color: #AFAAAA;
+    p { margin: 0; }
+  }
+}
 //descripcion-producto
 .main-product {
   background-image: url('productos/producto-background.jpg');
@@ -426,5 +470,25 @@ h3 {
     ul { padding-left: 0; }
   }
 }
+
+//blog
+.form-actions input {
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid $color-line;
+  color: $black;
+  cursor: pointer;
+  font-family: "PT Sans";
+  box-shadow: 1px 1px 1px $color-line;
+  font-size: .9em;
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  &:hover {
+    color: white;
+    background-color: $green;
+}
+}
+
 
 #body_content_title { display: none; }
