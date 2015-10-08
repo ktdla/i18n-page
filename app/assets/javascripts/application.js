@@ -4,3 +4,4 @@
 //= require_tree
 //= require nav
 //= require slider
+//= require posts
