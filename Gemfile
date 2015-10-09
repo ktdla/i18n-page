@@ -69,6 +69,7 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'dragonfly-s3_data_store'
 end
 
 gem 'refinerycms-contact_inquiries', path: 'vendor/extensions'
