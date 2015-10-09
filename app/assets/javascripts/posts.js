@@ -1,10 +1,6 @@
-$(".blog-1").each(function() {
-  $(".category a").each(function(){
-    var category = $(this).text();
-    console.log(category);
-    console.log("1");
-  })
-  $(this).addClass(category);
+$(".blog-1 .category a").each(function() {
+  var category = $(this).text();
+  $(this).parents(".blog-1").addClass(category);
 })
 
 
