@@ -1,0 +1,23 @@
+<%= render 'refinery/admin/search_header', :url => refinery.contact_inquiries_admin_contact_inquiries_path %>
+<% if searching? %>
+  <% if @contact_inquiries.any? %>
+    <ul>
+      <%= render :partial => 'contact_inquiry', :collection => @contact_inquiries %>
+    </ul>
+  <% else %>
+    <p><%= t('no_results', :scope => 'refinery.admin.search') %></p>
+  <% end %>
+<% else %>
+  <% if @grouped_contact_inquiries.any? -%>
+    <% @grouped_contact_inquiries.each do |container| %>
+      <h3><%= l((contact_inquiry_group = container.last).first.created_at, :format => :short) %></h3>
+      <ul>
+        <%= render :partial => 'contact_inquiry', :collection => contact_inquiry_group %>
+      </ul>
+    <% end %>
+  <% else -%>
+    <p>
+      <strong><%= t('no_contact_inquiries', :scope => 'refinery.contact_inquiries.admin.contact_inquiries.index') %></strong>
+    </p>
+  <% end -%>
+<% end %>

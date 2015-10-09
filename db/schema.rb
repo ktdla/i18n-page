@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004170670) do
+ActiveRecord::Schema.define(version: 20151009005750) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -133,6 +133,17 @@ ActiveRecord::Schema.define(version: 20151004170670) do
   add_index "refinery_blog_posts", ["id"], name: "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], name: "index_refinery_blog_posts_on_slug"
 
+  create_table "refinery_contact_inquiries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_contact_inquiries", ["id"], name: "index_refinery_contact_inquiries_on_id"
+
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
     t.string   "locale",            null: false
@@ -157,6 +168,17 @@ ActiveRecord::Schema.define(version: 20151004170670) do
     t.string   "image_title"
     t.string   "image_alt"
   end
+
+  create_table "refinery_job_inquiries", force: :cascade do |t|
+    t.string   "name"
+    t.text     "email"
+    t.text     "subject"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_job_inquiries", ["id"], name: "index_refinery_job_inquiries_on_id"
 
   create_table "refinery_page_part_translations", force: :cascade do |t|
     t.integer  "refinery_page_part_id", null: false

@@ -1,0 +1,79 @@
+nl:
+  refinery:
+    plugins:
+      contact_inquiries:
+        title: Contact Inquiries
+        description: Contactformulier en beheer van contact inquiries
+    contact_inquiries:
+      contact_inquiries:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+      admin:
+        contact_inquiries:
+          contact_inquiry:
+            delete_contact_inquiry: Deze contact inquiry definitief verwijderen
+            read_contact_inquiry: Lees de contact inquiry
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_contact_inquiries: U heeft nog geen contact inquiries ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_contact_inquiries: Terug naar alle contact inquiries
+            spam: Spam
+            spam_yes: 'ja'
+            contact_inquiry: Contact Inquiry
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        settings:
+          notification_recipients_form:
+            contact_inquiry_settings_value_name: Stuur notificaties naar
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            hint: "Wilt u naar meerdere adressen notificaties sturen? Vul dan meerdere e-mailadressen in gescheiden door komma's"
+            example: "Bijvoorbeeld: jan@werk.nl, els@kantoor.nl"
+          confirmation_email_form:
+            to: Aan
+            from: Van
+            subject: Onderwerp
+            click_to_edit_subject: Klik hier om het onderwerp bewerken
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            below_edit_email_sent: Hieronder kunt u de email die verzonden wordt bewerken.
+            the_customer_making_contact_inquiry: De persoon die de contact inquiry heeft ingezonden
+            message: Bericht
+            note: "N.B.: plaats de tekst %name% overal in de email waar u de naam van de klant persoon wilt invoegen"
+      mailer:
+        notification:
+          greeting: Hallo
+          you_recieved_new_contact_inquiry: U hebt een nieuwe contact inquiry ontvangen via de website.
+          contact_inquiry_starts: --- begin van de contact inquiry ---
+          contact_inquiry_ends: --- einde van de contact inquiry ---
+          from: Van
+          email: E-mail
+          phone: Telefoon
+          message: Bericht
+          closing_line: Met vriendelijke groet,
+          ps_html: P.S. Alle contact inquiries worden opgeslagen in de sectie Contact Inquiries van Refinery.
+  activerecord:
+    models:
+      contact_inquiry: Contact Inquiry
+    attributes:
+      contact_inquiry:
+        name: Name
+        email: Email
+        subject: Subject
+        message: Message

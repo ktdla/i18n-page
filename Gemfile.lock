@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/refinery/refinerycms-forms.git
+  revision: 8e047ad4135cbbceaf2c87f9c623bd4ed48f0575
+  branch: master
+  specs:
+    refinerycms-forms (1.0.0)
+      refinerycms-core (~> 3.0)
+
+GIT
   remote: https://github.com/refinery/refinerycms
   revision: 39768eb0534a094652aba68f9519e7aa9d50d4fc
   branch: master
@@ -55,6 +63,15 @@ GIT
       refinerycms-core (~> 3.0.0)
       refinerycms-settings (~> 3.0.0)
       seo_meta (~> 2.0.0.rc.1)
+
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-contact_inquiries (1.0.0)
+      actionmailer
+      filters_spam (~> 0.3)
+      refinerycms-core (~> 3.0.0)
+      refinerycms-settings (~> 3.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -295,6 +312,8 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-contact_inquiries!
+  refinerycms-forms!
   refinerycms-i18n
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
