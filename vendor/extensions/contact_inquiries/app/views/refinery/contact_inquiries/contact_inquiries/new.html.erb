@@ -11,22 +11,22 @@
 
       <div class='field name_field string_field'>
         <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, required: true %>
       </div>
 
       <div class='field email_field string_field'>
         <%= f.label :email %>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, required: true %>
       </div>
 
       <div class='field subject_field string_field'>
         <%= f.label :subject %>
-        <%= f.text_field :subject %>
+        <%= f.text_field :subject, required: true %>
       </div>
 
       <div class='field message_field text_field'>
         <%= f.label :message %>
-        <%= f.text_area :message, :rows => 8 %>
+        <%= f.text_area :message, :rows => 8, required: true %>
       </div>
 
       <div class='actions button'>
