@@ -54,6 +54,7 @@ end
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-i18n'
+gem 'refinerycms-forms', github: 'refinery/refinerycms-forms', branch: 'master', group: :development
 gem 'quiet_assets', group: :development
 
 # Add support for searching inside Refinery's admin interface.
@@ -69,3 +70,5 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'refinerycms-contact_inquiries', path: 'vendor/extensions'

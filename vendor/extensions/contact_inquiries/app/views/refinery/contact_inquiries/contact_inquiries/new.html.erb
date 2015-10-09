@@ -1,0 +1,39 @@
+<% content_for :body do %>
+  <section class='contact_inquiries container'>
+    <h2>Déjanos tu mensaje</h2>
+    <article class="contact">
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+
+    <%= form_for [refinery, :contact_inquiries, @contact_inquiry] do |f| %>
+      <%= render '/refinery/admin/error_messages',
+                 :object => @contact_inquiry,
+                 :include_object_name => true  %>
+
+      <div class='field name_field string_field'>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class='field email_field string_field'>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class='field subject_field string_field'>
+        <%= f.label :subject %>
+        <%= f.text_field :subject %>
+      </div>
+
+      <div class='field message_field text_field'>
+        <%= f.label :message %>
+        <%= f.text_area :message, :rows => 8 %>
+      </div>
+
+      <div class='actions button'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+    </article>
+  </section>
+<% end %>
+<%= render '/refinery/content_page' %>

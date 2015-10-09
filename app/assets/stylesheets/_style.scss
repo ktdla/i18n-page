@@ -324,7 +324,7 @@ h3 {
     resize: none;
     width: 100%;
   }
-  button {
+  button, input[type='submit'] {
     background-color: white;
     border-radius: 4px;
     border: 1px solid $color-line;
