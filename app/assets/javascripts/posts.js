@@ -1,23 +1,21 @@
+//Add class in articles depending span
 $(".blog-1 .category a").each(function() {
-  var category = $(this).text();
+  category = $(this).text();
   $(this).parents(".blog-1").addClass(category);
 })
 
-
-//var category = $("article").find(".category").text();
-//console.log(category);
-
-/*for (i=0; i<($(".blog-1").length); i++) {
-    var category = $(".blog-1 .category a").html();
-    $(".blog-1").addClass(category);
-    alert(category);
-    console.log(category);
-}*/
-
-/*
+//Filter options
 $( "select" ).click(function(){
-    console.log(category);
-  //var value = $( "option:selected" ).text();
-  //alert(value);
+  var value = $( "option:selected" ).text();
+  $(".blog-1").each(function(){
+    var x = $(this).attr("class");
+    var y = "blog-1 " + value;
+    if (x == y){
+      $(".blog-1").hide();
+      $("."+value).show();
+    }
+  });
+  if (value == "Selecciona una categoría") {
+    $(".blog-1").show();
+  }
 });
-*/
