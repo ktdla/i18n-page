@@ -14,8 +14,18 @@ $("#list-of-categories").change(function () {
 });
 
 //Filter post in home
-var a = $('.blog h2').text();
-if ( a === "Novedades") {
+var sectionCategory = $('.blog h2').text();
+if (sectionCategory) {
   $('.blog-1').hide();
-  $('.Noticias').show();
 }
+$(".blog-1").each(function() {
+  var articleCategory = $(this).attr('class').substring(7);
+  if ( sectionCategory === articleCategory) {
+    $('.' + articleCategory).show();
+  }
+  else if (sectionCategory === "Novedades") {
+    $('.Noticias').show();
+    $('.News').show();
+  }
+});
+
