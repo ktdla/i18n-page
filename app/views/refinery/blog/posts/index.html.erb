@@ -2,9 +2,22 @@
   <% if @posts.any? %>
     <section class="container blog" id="blog_posts">
       <select id="list-of-categories">
+        <% if locale.to_s == "es" %>
         <option>Selecciona una categoría</option>
         <option value="noticias">Noticias</option>
         <option value="recetas">Recetas</option>
+        <option value="eventos">Eventos</option>
+        <% elsif locale.to_s == "en" %>
+        <option>Select a category</option>
+        <option value="news">News</option>
+        <option value="recipes">Recipes</option>
+        <option value="events">Events</option>
+        <% else %>
+        <option>Selecione uma categoria</option>
+        <option value="notícia">Notícia</option>
+        <option value="recetas">Recipes</option>
+        <option value="receita">Receita</option>
+        <% end %>
       </select>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
       <%= will_paginate @posts %>
