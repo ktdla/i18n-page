@@ -23,7 +23,7 @@ $(".blog-1").each(function() {
   if ( sectionCategory === articleCategory) {
     $('.' + articleCategory).show();
   }
-  else if (sectionCategory === "Novedades") {
+  else {
     $('.Noticias').show();
     $('.News').show();
   }
