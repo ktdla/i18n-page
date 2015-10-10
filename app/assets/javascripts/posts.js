@@ -12,3 +12,10 @@ $("#list-of-categories").change(function () {
     elements.appendTo("#blog_posts");
   if (value != "Selecciona una categoría"&&value != "Select a category"&&value != "Selecione uma categoria") $('.blog-1').show().filter(':not(.' + value + ')').detach();
 });
+
+//Filter post in home
+var a = $('.blog h2').text();
+if ( a === "Novedades") {
+  $('.blog-1').hide();
+  $('.Noticias').show();
+}
