@@ -62,7 +62,25 @@
 </section>
 <section class="container blog line">
   <h2>Novedades</h2>
-  <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+  <% @posts.each do |post| %>
+    <% if post.live? %>
+    <article class="blog-1">
+      <div class="overlay"></div>
+      <% if (categories = post.categories.translated).any? %>
+        <span class='category'>
+          <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+        </span>
+      <% end %>
+      <div class="info">
+        <span class="description">
+            <%= link_to refinery.blog_post_path(post) %>
+            <%= image_tag 'blog/blog1.jpg' %>
+        </span>
+        <span class="title"><%= link_to post.title, refinery.blog_post_path(post) %></span>
+      </div>
+    </article>
+    <% end %>
+  <% end %>
 </section>
 <section class="container company">
   <h2>Empresas que forman parte de Miranda</h2>

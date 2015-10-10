@@ -10,6 +10,7 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
+      @posts = Blog::Post.newest_first.live.includes(:comments, :categories)
       render_with_templates?
     end
 
