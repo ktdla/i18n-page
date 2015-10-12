@@ -27,6 +27,7 @@ $(".blog-1").each(function() {
   else {
     $('.Noticias').show();
     $('.News').show();
+    $('.Notícia').show();
   }
 });
 
