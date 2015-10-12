@@ -1,14 +1,20 @@
+@media screen and (max-width: 1024px) {
+  header {
+    .logo { width: 350px; }
+    nav { margin-top: 30px; }
+  }
+}
 @media screen and (max-width: 900px) {
   header {
     border-bottom: 2px solid $color-line;
     overflow: hidden;
-    .logo { max-width: 200px; }
     .language {
       display: block;
       margin-bottom: 0;
       margin-top: 10px;
     }
     .navigation-menu-button {
+      margin-top: 30px;
       clear: right;
       display: block;
       float: right;
@@ -18,7 +24,6 @@
     }
     #navigation-menu {
       display: none;
-      margin-right: 50px;
       width: 100%;
       li {
         background-color: white;
@@ -27,10 +32,9 @@
         font-size: .8em;
         text-align: right;
         width: 100%;
-        a { padding-right: 50px; }
         &:last-child { width: 100%; }
         &.active {
-          background-color: $green;
+          background-color: #FFFFFF;
           margin: 0;
         }
       }
@@ -59,6 +63,25 @@
       width: 100%;
     }
   }
+  .mision-vision article {
+    float: inherit;
+    width: 100%;
+    border: none;
+    margin-bottom: 25px;
+  }
+  .values div{
+    float: inherit;
+    width: 100%;
+    &:nth-child(2) {
+      border: none;
+      padding-top: 0;
+      text-align: left;
+      article { padding-bottom: 25px; }
+    }
+    &:nth-child(3) {
+      article { margin: 0 0 25px; }
+    }
+  }
   footer {
     div article {
       height: 100px;
@@ -79,8 +102,8 @@
   header {
     .logo {
       display: block;
-      margin: 15px auto;
-      width: 100%;
+      margin: 15px 5%;
+      width: 90%;
     }
     .language { float: left; }
     .navigation-menu-button { margin-top: 10px; }
@@ -91,7 +114,7 @@
   }
   .company img {
     margin-right: 0;
-    width: 50%;
+    width: 100%;
   }
   footer {
     div article {
@@ -117,4 +140,5 @@
     }
     ul { display: none; }
   }
+  .container { padding: 25px; }
 }
