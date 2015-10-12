@@ -13,7 +13,7 @@ $("#list-of-categories").change(function () {
   if (value != "Selecciona una categoría"&&value != "Select a category"&&value != "Selecione uma categoria") $('.blog-1').show().filter(':not(.' + value + ')').detach();
 });
 
-//Filter post in home
+//Filter posts in pages
 var sectionCategory = $('.blog h2').text();
 if (sectionCategory) {
   $('.blog-1').hide();
@@ -21,6 +21,7 @@ if (sectionCategory) {
 $(".blog-1").each(function() {
   var articleCategory = $(this).attr('class').substring(7);
   if ( sectionCategory === articleCategory) {
+    $('.blog-1').hide();
     $('.' + articleCategory).show();
   }
   else {
