@@ -73,8 +73,7 @@
       <% end %>
       <div class="info">
         <span class="description">
-            <%= link_to refinery.blog_post_path(post) %>
-            <%= image_tag 'blog/blog1.jpg' %>
+          <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
         </span>
         <span class="title"><%= link_to post.title, refinery.blog_post_path(post) %></span>
       </div>

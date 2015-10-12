@@ -15,6 +15,9 @@ $("#list-of-categories").change(function () {
 
 //Filter posts in pages
 var sectionCategory = $('.blog h2').text();
+if (sectionCategory) {
+  $('.category').hide();
+}
 
 $('.blog-1').detach();
 elements.appendTo(".blog");
