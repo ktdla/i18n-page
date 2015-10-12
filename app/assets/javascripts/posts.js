@@ -15,19 +15,10 @@ $("#list-of-categories").change(function () {
 
 //Filter posts in pages
 var sectionCategory = $('.blog h2').text();
-if (sectionCategory) {
-  $('.blog-1').hide();
-}
-$(".blog-1").each(function() {
-  var articleCategory = $(this).attr('class').substring(7);
-  if ( sectionCategory === articleCategory) {
-    $('.blog-1').hide();
-    $('.' + articleCategory).show();
-  }
-  else {
-    $('.Noticias').show();
-    $('.News').show();
-    $('.Notícia').show();
-  }
-});
 
+$('.blog-1').detach();
+elements.appendTo(".blog");
+
+$('.blog-1').show().filter(':not(.' + sectionCategory + ')').detach();
+$('.blog-1').hide();
+$('.blog-1').slice(0,3).show();
