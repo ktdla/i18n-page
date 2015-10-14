@@ -38,7 +38,7 @@ body {
   padding: 50px;
 }
 
-.container.main { padding: 25px 0; }
+.container.main { padding: 0; }
 
 //home
 .container.main, .container.main-product { margin-top: 25px; }
@@ -129,7 +129,6 @@ li.slide-current { display: block; }
       background-color: white;
       border-radius: 5px;
       border: 1px solid $color-line;
-      box-shadow: 1px 1px 1px $color-line;
       color: $black;
       cursor: pointer;
       font-family: 'PT Sans', sans-serif;
