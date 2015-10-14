@@ -14,6 +14,7 @@
     <% if locale.to_s == "es" %>
       <%= link_to_in_li "INICIO", '/' %>
       <%= link_to_in_li "NOSOTROS", '/nosotros' %>
+      <%= link_to_in_li "CEBOLLA AMARILLA", '/cebolla_amarilla' %>
       <%= link_to_in_li "PRODUCTOS", '/productos' %>
       <%= link_to_in_li "CALIDAD", '/calidad' %>
       <%= link_to_in_li "BLOG", '/blog' %>
@@ -21,6 +22,7 @@
     <% elsif locale.to_s == "en" %>
       <%= link_to_in_li "HOME", '/' + locale.to_s %>
       <%= link_to_in_li "THE COMPANY", '/' + locale.to_s + '/nosotros' %>
+      <%= link_to_in_li "SWEET ONION", '/' + locale.to_s + '/sweet_onion' %>
       <%= link_to_in_li "PRODUCTS",'/' + locale.to_s + '/products' %>
       <%= link_to_in_li "QUALITY", '/' +locale.to_s + '/calidad' %>
       <%= link_to_in_li "BLOG", '/' +locale.to_s + '/blog' %>
@@ -28,6 +30,7 @@
     <% else %>
       <%= link_to_in_li "INÍCIO", '/' + locale.to_s %>
       <%= link_to_in_li "A EMPRESA", '/' + locale.to_s + '/a-empresa' %>
+      <%= link_to_in_li "CEBOLA AMARELA",'/' + locale.to_s + '/cebola_amarela' %>
       <%= link_to_in_li "PRODUTOS",'/' + locale.to_s + '/produtos' %>
       <%= link_to_in_li "QUALIDADE", '/' +locale.to_s + '/qualidade' %>
       <%= link_to_in_li "BLOG", '/' +locale.to_s + '/blog' %>
