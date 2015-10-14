@@ -1,71 +1,4 @@
-<section class="main slider-container container line">
-  <ul id="slider" class="slider-wrapper">
-    <li class="slide-current">
-      <%= image_tag 'slider/background-main.jpg' %>
-    </li>
-    <li>
-      <%= image_tag 'slider/miranda-slider.jpg' %>
-    </li>
-  </ul>
-</section>
-<section class="product container line">
-  <h2>Ofrecemos productos de calidad</h2>
-  <article>
-    <a href="/descripcion-producto">
-      <div class="overlay"></div>
-      <%= image_tag 'productos/amarilla-background.jpg' %>
-    </a>
-  </article>
-  <article>
-    <a href="/descripcion-producto">
-      <div class="overlay"></div>
-      <%= image_tag 'productos/roja-background.jpg' %>
-    </a>
-  </article>
-  <article>
-    <a href="/descripcion-producto">
-      <div class="overlay"></div>
-      <%= image_tag 'productos/ajos-background.jpg' %>
-    </a>
-  </article>
-</section>
-<section class="container certificate line">
-  <h2>Certificaciones</h2>
-  <article>
-    <%= image_tag 'certificado/certificado-2.jpg' %>
-    <a href="https://s3.amazonaws.com/miranda-web/certificados/certificado-2.pdf" download="certificado-2">
-      <button>
-        Descargar
-        <i class="fa fa-download"></i>
-      </button>
-    </a>
-  </article>
-  <article>
-    <%= image_tag 'certificado/certificado-3.jpg' %>
-    <a href="https://s3.amazonaws.com/miranda-web/certificados/certificado-3.pdf" download="certificado-3">
-      <button>Descargar!!
-      <i class="fa fa-download"></i></button>
-    </a>
-  </article>
-  <article>
-    <%= image_tag 'certificado/certificado-4.jpg' %>
-    <a href="https://s3.amazonaws.com/miranda-web/certificados/certificado-4.pdf" download="certificado-4">
-      <button>
-        Descargar
-        <i class="fa fa-download"></i>
-      </button>
-    </a>
-  </article>
-  <article>
-    <%= image_tag 'certificado/certificado-5.jpg' %>
-    <a href="https://s3.amazonaws.com/miranda-web/certificados/certificado-5.pdf" download="certificado-5">
-      <button>
-        Descargar
-        <i class="fa fa-download"></i>
-      </button>
-    </a>
-  </article>
-</section>
+<%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
 <section class="container blog line">
   <h2>Noticias</h2>
   <% @posts.each do |post| %>
@@ -86,10 +19,4 @@
     </article>
     <% end %>
   <% end %>
-</section>
-<section class="container company">
-  <h2>Empresas que forman parte de Miranda</h2>
-  <%= image_tag 'empresas/agricola-logo.png' %>
-  <%= image_tag 'empresas/miranda-internacional-logo.png' %>
-  <%= image_tag 'empresas/agricola-logo.png' %>
 </section>
