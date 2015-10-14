@@ -10,6 +10,7 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
+      @posts = Blog::Post.newest_first.live.includes(:comments, :categories)
       render_with_templates?
     end
 
@@ -31,7 +32,7 @@ module Refinery
       elsif should_redirect_to_friendly_url?
         redirect_to refinery.url_for(page.url), :status => 301 and return
       end
-
+      @posts = Blog::Post.newest_first.live.includes(:comments, :categories)
       render_with_templates?
     end
 
