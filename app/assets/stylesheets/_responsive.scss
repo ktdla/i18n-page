@@ -1,10 +1,17 @@
 @media screen and (max-width: 1024px) {
   header {
-    .logo { width: 350px; }
-    nav { margin-top: 30px; }
+    .logo { width: 250px; }
+    .language { margin-top: 0;}
+    nav {
+      margin-top: 0;
+      #navigation-menu a {
+        font-size: 0.9em;
+        padding: 0;
+      }
+    }
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   header {
     border-bottom: 2px solid $color-line;
     overflow: hidden;
@@ -98,15 +105,18 @@
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 480px) {
   header {
     .logo {
       display: block;
       margin: 15px 5%;
-      width: 90%;
+      width: 70%;
     }
     .language { float: left; }
-    .navigation-menu-button { margin-top: 10px; }
+    .navigation-menu-button {
+      margin-top: 10px;
+      font-size: 2em;
+    }
   }
   .certificate article {
       margin-right: 0;
