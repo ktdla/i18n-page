@@ -12,7 +12,7 @@ $(function() {
       lengthSlider = pb.items.panel.length;
 
     pb.init = function(settings) {
-      this.settings = settings || {duration: 8000} 
+      this.settings = settings || {duration: 8000}
       var output = '';
 
       SliderInit();
@@ -40,8 +40,8 @@ $(function() {
       }
 
       controls.removeClass('active').eq(nextSlider).addClass('active');
-      panels.eq(currentSlider).fadeOut('slow');
-      panels.eq(nextSlider).fadeIn('slow');
+      panels.eq(currentSlider).fadeOut(0);
+      panels.eq(nextSlider).fadeIn(0);
 
       currentSlider = nextSlider;
       nextSlider += 1;
