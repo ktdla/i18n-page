@@ -11,6 +11,7 @@
       }
     }
   }
+  .contact { width: 70%; }
 }
 @media screen and (max-width: 768px) {
   header {
@@ -76,18 +77,31 @@
       article { margin: 0 0 25px; }
     }
   }
+  .contact {
+    width: 90%;
+    padding: 25px;
+  }
   footer {
     div article {
       height: 100px;
       .fa {
         display: flex;
         justify-content: center;
+        font-size: 2.5em;
       }
       div {
-        font-size: .9em;
+        font-size: .8em;
         position: static;
         text-align: center;
       }
+    }
+    #navigation-menu {
+      font-size: .9em;
+      padding-left: 0;
+      margin: 10px;
+      float: inherit;
+      text-align: center;
+      li { padding-left: 5px; }
     }
   }
 }
@@ -164,7 +178,7 @@
         float: left;
         text-align: right;
         width: 20%;
-        font-size: 2.3em;
+        font-size: 2.5em;
         margin-top: 5px;
       }
       div {
