@@ -1,5 +1,8 @@
 <section class="main-product container">
-  <div class="overlay"></div>
+  <div class="container-img">
+    <%= image_tag 'productos/cebolla-background.png' %>
+    <div class="overlay"></div>
+  </div>
   <h1>Cebolla Amarilla Dulce</h1>
 </section>
 <section class="container line product-description">
@@ -47,31 +50,29 @@
   <h2>¿Por qué consumirlo?</h2>
   <%= image_tag 'productos/producto-beneficio.jpg' %>
   <div>
-    <span>Previene y combate enfermedades cardiovasculares</span>
-    <span>Reduce riesgo de contraer cáncer</span>
-    <span>Es uno de los mejores antibióticos naturales</span>
+    <i class="fa fa-circle"></i><span>Previene y combate enfermedades cardiovasculares</span>
+    <i class="fa fa-circle"></i><span>Reduce riesgo de contraer cáncer</span>
+    <i class="fa fa-circle"></i><span>Es uno de los mejores antibióticos naturales</span>
   </div>
 </section>
 <section class="container blog">
   <h2>Recetas</h2>
-  <article class="blog-1">
-    <%= image_tag 'blog/blog1.jpg' %>
-    <div class="info">
-      <span class="title">Título que describa el primer blog</span>
-      <span class="description">Lorem ipsum dolor sit amet.</span>
-    </div>
-  </article>
-  <article class="blog-1">
-    <%= image_tag 'blog/blog1.jpg' %>
-    <div class="info">
-      <span class="title">Título que describa el segundo blog</span>
-      <span class="description">Lorem ipsum dolor sit amet.</span>
-  </article>
-  <article class="blog-1">
-    <%= image_tag 'blog/blog1.jpg' %>
-    <div class="info">
-      <span class="title">Título que describa el tercer blog</span>
-      <span class="description">Lorem ipsum dolor sit amet.</span>
-    </div>
-  </article>
+  <% @posts.each do |post| %>
+    <% if post.live? %>
+    <article class="blog-1">
+      <div class="overlay"></div>
+      <% if (categories = post.categories.translated).any? %>
+        <span class='category'>
+          <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+        </span>
+      <% end %>
+      <div class="info">
+        <span class="description">
+          <%= link_to post.custom_teaser.html_safe, refinery.blog_post_path(post) %>
+        </span>
+        <span class="title"><%= link_to post.title, refinery.blog_post_path(post) %></span>
+      </div>
+    </article>
+    <% end %>
+  <% end %>
 </section>

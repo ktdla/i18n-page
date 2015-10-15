@@ -8,13 +8,14 @@ footer {
       display: block;
       color: white;
     }
+    a { color: white; }
     article {
       height: 60px;
       position: relative;
       font-size: .8em;
       letter-spacing: .5px;
-      a { 
-        color: white; 
+      a {
+        color: white;
         &:hover { color: white; }
       }
       i { font-size: 3em; }
