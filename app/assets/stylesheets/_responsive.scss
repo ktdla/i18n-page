@@ -105,7 +105,16 @@
     padding: 5px 15px;
     &:last-child { padding-top: 40px;}
   }
-
+  .product-description {
+    .description, .product-calendar, .product-details { width: 100%; }
+    .description { padding-right: 0; }
+    .product-details {
+      padding: 0;
+      margin-right: 0;
+      margin-top: 20px;
+      ul, ul li { margin: 0; }
+    }
+  }
   footer {
     div article {
       height: 100px;
@@ -191,9 +200,7 @@
       line-height: 15px;
     }
   }
-  .product-details {
-    width: 100%;
-  }
+
   .benefits {
     img { display: none; }
     div {
