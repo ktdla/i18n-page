@@ -135,9 +135,12 @@
       margin-right: 0;
       width: 100%;
   }
-  .company img {
-    margin-right: 0;
-    width: 100%;
+  .companies .company {
+    width: 90%;
+    padding-left: 0;
+    margin: 0 5%;
+    img { float: right; }
+    span { line-height: 93px; }
   }
   footer {
     div article {
