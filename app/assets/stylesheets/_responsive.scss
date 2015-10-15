@@ -115,6 +115,7 @@
       ul, ul li { margin: 0; }
     }
   }
+  .main-product h1 { font-size: 2em; }
   footer {
     div article {
       height: 100px;
@@ -215,6 +216,15 @@
         margin-left: 15px;
         &:last-child { padding-top: 5px;}
       }
+    }
+  }
+  .main-product.container {
+    padding: 0;
+    .overlay { height: 97%; }
+    h1 {
+      font-size: 1.5em;
+      bottom: 20px;
+      left: 25px;
     }
   }
   footer {
