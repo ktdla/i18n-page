@@ -15,36 +15,21 @@
   header {
     border-bottom: 2px solid $color-line;
     overflow: hidden;
+    .logo {
+      width: 50%;
+      margin: 40px 25% 0;
+    }
     .language {
       display: block;
-      margin-bottom: 0;
-      margin-top: 10px;
-    }
-    .navigation-menu-button {
-      margin-top: 30px;
-      clear: right;
-      display: block;
-      float: right;
-      font-size: 1.5em;
-      margin-right: 50px;
-      &:hover { color: $green; }
-    }
-    #navigation-menu {
-      display: none;
+      position: relative;
+      top: -150px;
       width: 100%;
-      li {
-        background-color: white;
-        border-radius: 0;
-        display: block;
-        font-size: .8em;
-        text-align: right;
-        width: 100%;
-        &:last-child { width: 100%; }
-        &.active {
-          background-color: #FFFFFF;
-          margin: 0;
-        }
-      }
+      text-align: center;
+    }
+    nav {
+      margin-top: -35px;
+      width: 100%;
+      margin-bottom: 0;
     }
   }
   .main h1 {
@@ -114,8 +99,30 @@
     }
     .language { float: left; }
     .navigation-menu-button {
-      margin-top: 10px;
-      font-size: 2em;
+      margin-top: 30px;
+      clear: right;
+      display: block;
+      float: right;
+      font-size: 1.5em;
+      margin-right: 50px;
+      &:hover { color: $green; }
+    }
+    #navigation-menu {
+      display: none;
+      width: 100%;
+      li {
+        background-color: white;
+        border-radius: 0;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        width: 100%;
+        &:last-child { width: 100%; }
+        &.active {
+          background-color: #FFFFFF;
+          margin: 0;
+        }
+      }
     }
   }
   .certificate article {
