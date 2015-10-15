@@ -19,6 +19,10 @@
       font-size: .9em;
     }
   }
+  .benefits div span {
+    padding: 35px 30px;
+    &:last-child { padding-top: 70px;}
+  }
 }
 @media screen and (max-width: 768px) {
   header {
@@ -97,6 +101,11 @@
       line-height: 130px;
     }
   }
+  .benefits div span {
+    padding: 5px 15px;
+    &:last-child { padding-top: 40px;}
+  }
+
   footer {
     div article {
       height: 100px;
@@ -180,6 +189,25 @@
     span {
       margin: 9% 0;
       line-height: 15px;
+    }
+  }
+  .product-details {
+    width: 100%;
+  }
+  .benefits {
+    img { display: none; }
+    div {
+      width: 100%;
+      padding: 0;
+      i {
+        display: block;
+        float: left;
+        margin-top: 10px;
+      }
+      span {
+        margin-left: 15px;
+        &:last-child { padding-top: 5px;}
+      }
     }
   }
   footer {
