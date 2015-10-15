@@ -1,5 +1,6 @@
 @media screen and (max-width: 1024px) {
   header {
+    padding: 25px 10px;
     .logo { width: 250px; }
     .language { margin-top: 0;}
     nav {
@@ -91,6 +92,9 @@
   }
 }
 
+@media screen and (max-width: 670px) {
+  header .language { top: -120px; }
+}
 @media screen and (max-width: 480px) {
   header {
     .logo {
@@ -109,7 +113,8 @@
     .navigation-menu-button {
       display: block;
       float: right;
-      font-size: 2.5em;
+      font-size: 2em;
+      margin-top: 10px;
       text-align: center;
       width: 30%;
       &:hover { color: $green; }
