@@ -13,7 +13,11 @@ footer {
       position: relative;
       font-size: .8em;
       letter-spacing: .5px;
-      i { font-size: 2em; }
+      a { 
+        color: white; 
+        &:hover { color: white; }
+      }
+      i { font-size: 3em; }
       div {
         left: 65px;
         top: 0;

@@ -1,43 +1,37 @@
 @media screen and (max-width: 1024px) {
   header {
-    .logo { width: 350px; }
-    nav { margin-top: 30px; }
+    .logo { width: 250px; }
+    .language { margin-top: 0;}
+    nav {
+      margin-top: 0;
+      #navigation-menu a {
+        font-size: 0.9em;
+        padding: 0;
+      }
+    }
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   header {
     border-bottom: 2px solid $color-line;
     overflow: hidden;
+    .logo {
+      width: 50%;
+      margin: 40px 25% 0;
+    }
     .language {
       display: block;
-      margin-bottom: 0;
-      margin-top: 10px;
-    }
-    .navigation-menu-button {
-      margin-top: 30px;
-      clear: right;
-      display: block;
-      float: right;
-      font-size: 1.5em;
-      margin-right: 50px;
-      &:hover { color: $green; }
-    }
-    #navigation-menu {
-      display: none;
+      position: relative;
+      top: -150px;
       width: 100%;
-      li {
-        background-color: white;
-        border-radius: 0;
-        display: block;
-        font-size: .8em;
-        text-align: right;
-        width: 100%;
-        &:last-child { width: 100%; }
-        &.active {
-          background-color: #FFFFFF;
-          margin: 0;
-        }
-      }
+      text-align: center;
+      padding-left: 0;
+      font-size: .7em;
+    }
+    nav {
+      margin-top: -35px;
+      width: 100%;
+      margin-bottom: 0;
     }
   }
   .main h1 {
@@ -98,23 +92,58 @@
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 480px) {
   header {
     .logo {
       display: block;
-      margin: 15px 5%;
-      width: 90%;
+      margin: 15px 15%;
+      width: 70%;
     }
-    .language { float: left; }
-    .navigation-menu-button { margin-top: 10px; }
+    .language {
+      float: left;
+      margin-top: 15px;
+      position: static;
+      padding-left: 0;
+      width: 70%;
+      li { padding: 0 5px; }
+    }
+    .navigation-menu-button {
+      display: block;
+      float: right;
+      font-size: 2.5em;
+      text-align: center;
+      width: 30%;
+      &:hover { color: $green; }
+    }
+    nav { margin-top: 0; }
+    #navigation-menu {
+      display: none;
+      width: 90%;
+      li {
+        background-color: white;
+        border-radius: 0;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        width: 100%;
+        &:last-child { width: 100%; }
+        &.active {
+          background-color: #FFFFFF;
+          margin: 0;
+        }
+      }
+    }
   }
   .certificate article {
       margin-right: 0;
       width: 100%;
   }
-  .company img {
-    margin-right: 0;
-    width: 100%;
+  .companies .company {
+    width: 90%;
+    padding-left: 0;
+    margin: 0 5%;
+    img { float: right; }
+    span { line-height: 93px; }
   }
   footer {
     div article {
@@ -131,6 +160,8 @@
         float: left;
         text-align: right;
         width: 20%;
+        font-size: 2.3em;
+        margin-top: 5px;
       }
       div {
         float: left;

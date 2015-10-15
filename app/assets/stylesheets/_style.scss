@@ -38,7 +38,7 @@ body {
   padding: 50px;
 }
 
-.container.main { padding: 25px 0; }
+.container.main { padding: 0; }
 
 //home
 .container.main, .container.main-product { margin-top: 25px; }
@@ -129,7 +129,6 @@ li.slide-current { display: block; }
       background-color: white;
       border-radius: 5px;
       border: 1px solid $color-line;
-      box-shadow: 1px 1px 1px $color-line;
       color: $black;
       cursor: pointer;
       font-family: 'PT Sans', sans-serif;
@@ -183,10 +182,29 @@ li.slide-current { display: block; }
 }
 
 //nosotros
-.company {
+.companies {
   overflow: hidden;
-  img {
-    @include span-columns(4);
+  .company {
+    float: left;
+    padding-left: 100px;
+    width: 50%;
+    img {
+      float: left;
+      width: 50%;
+    }
+    span {
+      float: left;
+      line-height: 138px;
+      vertical-align: top;
+    }
+    &:last-child {
+      padding-left: 0;
+      width: 100%;
+      span {
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -294,7 +312,6 @@ h3 {
   overflow: hidden;
   padding: 25px 50px;
   width: 60%;
-  box-shadow: 2px 2px 2px $color-line;
   span { display: block; }
   input {
     background: url(images/.png) center center no-repeat;
@@ -331,7 +348,6 @@ h3 {
     cursor: pointer;
     float: right;
     font-family: "PT Sans";
-    box-shadow: 1px 1px 1px $color-line;
     font-size: .9em;
     margin-top: 10px;
     padding: 10px;
