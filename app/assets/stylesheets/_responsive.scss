@@ -227,6 +227,10 @@
       left: 25px;
     }
   }
+  .product-description .product-calendar div {
+    @include span-columns(4);
+    &:nth-child(3n+1) { margin-right: 0; }
+  }
   footer {
     div article {
       float: inherit;
