@@ -133,11 +133,12 @@
     #navigation-menu {
       font-size: .9em;
       padding-left: 0;
-      margin: 10px;
+      margin: 10px 10px 0;
       float: inherit;
       text-align: center;
       li { padding-left: 5px; }
     }
+    .credits { text-align: center; }
   }
 }
 

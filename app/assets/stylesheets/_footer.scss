@@ -29,13 +29,26 @@ footer {
     }
   }
   ul {
-    margin: 10px 50px;
+    margin: 10px 50px 0;
     float: right;
     li {
       padding-left: 20px;
+      margin-bottom: 0;
       display: inline-block;
       font-size: .7em;
     }
   }
   div .container { padding: 0; }
+  .credits {
+    background-color: white;
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+    a {
+      border-top: 1px solid $green;
+      font-weight: normal;
+      color: $black;
+      font-size: .6em;
+    }
+  }
 }
