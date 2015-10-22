@@ -1,6 +1,12 @@
 <%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
 <section class="container blog">
-  <h2>Recetas</h2>
+  <% if locale.to_s == "es" %>
+    <h2>Recetas</h2>
+  <% elsif locale.to_s == "en" %>
+    <h2>Recipes</h2>
+  <% else %>
+    <h2>Receitas</h2>
+  <% end %>
   <% @posts.each do |post| %>
     <% if post.live? %>
     <article class="blog-1">
