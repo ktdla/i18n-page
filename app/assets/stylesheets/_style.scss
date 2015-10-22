@@ -185,26 +185,9 @@ li.slide-current { display: block; }
 .companies {
   overflow: hidden;
   .company {
-    float: left;
-    padding-left: 100px;
-    width: 50%;
-    img {
-      float: left;
-      width: 50%;
-    }
-    span {
-      float: left;
-      line-height: 138px;
-      vertical-align: top;
-    }
-    &:last-child {
-      padding-left: 0;
-      width: 100%;
-      span {
-        text-align: center;
-        width: 100%;
-      }
-    }
+    text-align: center;
+    @include span-columns(4);
+    img { width: 100%; }
   }
 }
 
